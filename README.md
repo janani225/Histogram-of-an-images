@@ -1,3 +1,4 @@
+# EX NO-3
 # Histogram-of-an-images
 ## Aim
 To obtain a histogram for finding the frequency of pixels in an Image with pixel values ranging from 0 to 255. Also write the code using OpenCV to perform histogram equalization.
@@ -26,26 +27,26 @@ The Histogram of gray scale image and color image is shown.
 
 ## Program:
 ```python
-# Developed By: Janani V.S
+# Developed By: JANANI.V.S
 # Register Number: 212222230050
 ```
-## Input Grayscale Image and Color Image :
+# Grayscale image and Color image
 ```
 import cv2
 import matplotlib.pyplot as plt
-gray_image = cv2.imread("grayretriever.jpg")
-color_image = cv2.imread("colorretriever.jpg")
+gray_image = cv2.imread("immg.jpeg")
+color_image = cv2.imread("img.jpeg",-1)
 cv2.imshow("Gray Image",gray_image)
-cv2.imshow("Color Image",color_image)
+cv2.imshow("Colour Image",color_image)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
-## Histogram of Grayscale Image and any channel of Color Image :
+# Histogram of Grayscale image and color image
 ```
 import numpy as np
 import cv2
-Gray_image = cv2.imread("grayretriever.jpg")
-Color_image = cv2.imread("colorretriever.jpg")
+Gray_image = cv2.imread("immg.jpeg")
+Color_image = cv2.imread("img.jpeg")
 import matplotlib.pyplot as plt
 gray_hist = cv2.calcHist([Gray_image],[0],None,[256],[0,256])
 color_hist = cv2.calcHist([Color_image],[0],None,[256],[0,256])
@@ -66,10 +67,10 @@ plt.stem(color_hist)
 plt.show()
 cv2.waitKey(0)
 ```
-## Histogram Equalization of Grayscale Image :
+# Histogram equalization of Grayscale image
 ```
 import cv2
-gray_image = cv2.imread("grayretriever.jpg",0)
+gray_image = cv2.imread("immg.jpeg",0)
 cv2.imshow('Grey Scale Image',gray_image)
 equ = cv2.equalizeHist(gray_image)
 cv2.imshow("Equalized Image",equ)
@@ -77,24 +78,22 @@ cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
 
-
 ## Output:
 ### Input Grayscale Image and Color Image
-![image](https://github.com/janani225/Histogram-of-an-images/assets/113497333/2033f7e1-9efc-4781-9365-bbd15c60df8e)
+
+![Screenshot 2024-03-20 114119](https://github.com/premalatha-sureshbabu/Histogram-of-an-images/assets/120620842/1e4bae86-914d-4f2f-8d01-85e7aa475836)
 
 
 ### Histogram of Grayscale Image and any channel of Color Image
-![image](https://github.com/janani225/Histogram-of-an-images/assets/113497333/e71f96d4-4362-48e1-bc1a-d98fc49ad0b4)
-![image](https://github.com/janani225/Histogram-of-an-images/assets/113497333/6e2c0158-651f-4b2a-8434-075d2d93eff2)
-![image](https://github.com/janani225/Histogram-of-an-images/assets/113497333/63198d54-4290-4453-ac50-02eadd7d4f05)
-![image](https://github.com/janani225/Histogram-of-an-images/assets/113497333/b7cd69d1-c963-46f3-a062-6ac07ed84779)
 
+![Screenshot 2024-03-20 114329](https://github.com/premalatha-sureshbabu/Histogram-of-an-images/assets/120620842/cd4d453c-f8f9-46f4-910c-935f2e0fb0cb)
+
+![Screenshot 2024-03-20 114340](https://github.com/premalatha-sureshbabu/Histogram-of-an-images/assets/120620842/bcf06fea-77ac-4607-bc8e-6544bf27831d)
 
 
 ### Histogram Equalization of Grayscale Image.
-![image](https://github.com/janani225/Histogram-of-an-images/assets/113497333/8f9a3340-8c48-49d7-a37b-456dab8d8acd)
 
-
+![Screenshot 2024-03-20 114235](https://github.com/premalatha-sureshbabu/Histogram-of-an-images/assets/120620842/8b3a4c08-f057-4805-849d-f47154b0872d)
 
 
 ## Result: 
